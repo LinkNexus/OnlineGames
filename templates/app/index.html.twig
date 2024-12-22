@@ -3,8 +3,9 @@
 {% block title %}Hello AppController!{% endblock %}
 
 {% block react_component %}
-    {{ react_component('Hello', {
-        fullName: 'Levy Nkeneng',
-        mercureUrl: mercure('http://localhost:5001/test')|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw
+    {{ react_component('App', {
+        user: user,
+        joinUrl: mercure('http://localhost:5001/join')|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw,
+        choosePlayersUrl: mercure('http://localhost:5001/choose-players')|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw
     }) }}
 {% endblock %}

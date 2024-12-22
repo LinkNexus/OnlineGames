@@ -1,5 +1,5 @@
 import { registerReactControllerComponents } from '@symfony/ux-react';
 import './bootstrap.ts';
-import "./app.css";
+import "./app.sass";
 
 console.log("Happy coding !!");

@@ -1,12 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base
+@tailwind components
+@tailwind utilities
 
-body {
-  background-color: #eeeeee;
-}
+.grids
+  @apply bg-slate-900
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  grid-gap: 10px
 
-.card {
-  @apply flex flex-wrap justify-center content-center w-32 h-40 rounded-md border-2 border-zinc-500 p-2 shadow-md;
-  
-}
+  & div
+    @apply bg-slate-400 w-28 h-28 cursor-pointer hover:bg-slate-500 text-white text-6xl font-bold flex content-center justify-center flex-wrap
+
+
+
+
