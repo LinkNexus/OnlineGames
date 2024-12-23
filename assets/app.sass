@@ -12,6 +12,22 @@
   & div
     @apply bg-slate-400 w-28 h-28 cursor-pointer hover:bg-slate-500 text-white text-6xl font-bold flex content-center justify-center flex-wrap
 
+.queue-side
+  @apply w-1/2 flex flex-col items-center justify-center flex-wrap
+
+  & .image
+    @apply h-fit w-fit rounded-full bg-red-500 border-2 border-slate-300
+
+    & img
+      @apply rounded-full bg-red-500 w-52 h-52
+      object-fit: cover
+
+  & .header
+    @apply mt-3
+
+    & h1
+      @apply font-bold text-3xl
+
 
 
 

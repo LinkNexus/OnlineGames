@@ -4,8 +4,9 @@
 
 {% block react_component %}
     {{ react_component('App', {
-        user: user,
-        joinUrl: mercure('http://localhost:5001/join')|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw,
-        choosePlayersUrl: mercure('http://localhost:5001/choose-players')|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_HEX_TAG'))|raw
+        user: app.user,
+        joinUrl: mercure('http://localhost:5001/join')|json_serialize,
+        synchronizePlayersUrl: mercure('http://localhost:5001/players/synchronize')|json_serialize,
+        isPlayerReadyUrl: mercure('http://localhost:5001/players/is-ready')|json_serialize
     }) }}
 {% endblock %}
